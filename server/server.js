@@ -43,7 +43,7 @@ app.get('/todos/:id', function (req, res) {
     if(!todo){
       return res.status(404).send();
     }
-    res.send({todo: todo});
+    res.send({todo});
   }, function (e) {
     res.status(400).send(e);
   });
@@ -60,7 +60,7 @@ app.delete('/todos/:id', function (req, res) {
     if(!todo){
       return res.status(404).send();
     }
-    res.send({todo: todo});
+    res.send({todo});
   }, function (e) {
     res.status(400).send(e);
   });
